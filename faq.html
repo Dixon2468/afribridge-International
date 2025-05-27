@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently asked questions about traveling, working, and studying abroad with Afribridge International." />
+  <meta name="keywords" content="FAQ travel Uganda, visa questions Uganda, work abroad FAQ, Afribridge International" />
+  <meta name="author" content="Afribridge International" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FAQs | Afribridge International" />
+  <meta property="og:description" content="Get answers to common questions about visas, job placement, and studying abroad from Uganda." />
+  <meta property="og:image" content="https://yourdomain.com/images/faq-og.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/faq.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQs | Afribridge International" />
+  <meta name="twitter:description" content="Answers to common questions about your journey abroad with Afribridge International." />
+  <meta name="twitter:image" content="https://yourdomain.com/images/faq-og.jpg" />
+
+  <title>FAQs | Afribridge International</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+        body,html {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #e2e0ecf6;
+    }
+
+
+    header {
+  background-color: #e2e0ec;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  top: 0;
+  z-index: 1000;
+
+    }
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      color: #003366;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .faq-question.active::after {
+      content: "-";
+    }
+
+    .faq-answer.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="header-placeholder"></div>
+  </header>
+
+  <section class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">Do I need experience to apply for a job abroad?</div>
+      <div class="faq-answer">Not necessarily. We have placements for both skilled and semi-skilled workers. Your chances improve with documentation and readiness to learn.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What countries do you help with?</div>
+      <div class="faq-answer">We assist clients with opportunities in Canada, Qatar, Sweden, Luxembourg, Italy, and Turkey.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How much does a consultation cost?</div>
+      <div class="faq-answer">Our first consultation is completely free. Further services are priced depending on the support you need.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can you help with student visas?</div>
+      <div class="faq-answer">Yes, we offer complete study abroad guidance, including admission, visa support, and departure prep.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does the visa process take?</div>
+      <div class="faq-answer">It varies by country, but typically ranges from 2 weeks to 2 months. We guide you through every stage.</div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+
+  <script>
+    // Load header
+    fetch('client/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+  
+        // Reattach header event listener
+        const toggle = document.getElementById('menu-toggle');
+        if (toggle) {
+          toggle.addEventListener('click', function () {
+            document.getElementById('nav-links').classList.toggle('active');
+          });
+        }
+      });
+  
+    // Load footer
+    fetch('client/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        question.classList.toggle('active');
+        question.nextElementSibling.classList.toggle('active');
+      })
+    });
+});
+    
+  </script>
+    
+  <div id="footer-placeholder"></div>
+    </body>
+  </html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en">
+<head>
+      <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="description" content="Afribridge International offering visa support, study and work abroad services." />
+            <meta name="keywords" content="Uganda travel, visa support Uganda, study abroad, work abroad, travel consultancy" />
+              <meta name="author" content="Afribridge International" />
+                <title>Your Journey Abroad Starts Here | Afribridge International</title>
+                <link rel="icon" href="uganda.jpeg"/>
+  <link rel="stylesheet" href="styles.css" />
+  <!--<base href="/Travel/">-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #e2e0ec;
+    }header {
+  background-color: #e2e0ec;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  top: 0;
+  z-index: 1000;
+      
+      color: white;
+      
+      text-align: center;
+}
+.hero{
+  
+  background: url('uganda2.JPEG')center/cover no-repeat;
+  background-color: #f8f6f6;
+  color: rgb(12, 12, 12);
+  text-align: center;
+  padding: 100px 20px;
+  height: 100vh;
+  font-weight: bold;
+}
+
+@media (max-width:768px){
+.hero{
+  height: auto;
+}
+
+}
+
+
+
+    .about-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em;
+    }
+
+    .about-section h2 {
+      color: #003366;
+    }
+
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .mission-vision div {
+      flex: 1;
+      background: #f2f2f2;
+      padding: 1.5em;
+      border-radius: 10px;
+    }
+
+    .team {
+      text-align: center;
+      margin-top: 3em;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .team-member {
+      max-width: 200px;
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .team-member h4 {
+      margin: 0.5em 0 0.2em;
+    }
+
+    /*footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #003366;
+      color: white;
+      margin-top: 4em;
+    }*/
+</style>
+</head>
+<body>
+  <header>
+    <div id="header-placeholder"></div>
+  </header>  <header class="hero">
+    <h1>About Us</h1>
+    <p>Empowering Ugandans to explore global opportunities with confidence.</p>
+    <section class="about-section">
+      <h2>Who We Are</h2>
+      <p>We are a passionate travel consultancy based in Uganda dedicated to helping individuals and families explore international opportunities—be it studying, working, or relocating abroad. With a growing network in Canada, Sweden, Qatar, and beyond, we provide expert support from paperwork to plane tickets.</p>
+  
+  
+
+  
+    <div class="mission-vision">
+      <div>
+        <h3>Our Mission</h3>
+        <p>To empower Ugandans with accurate information, reliable services, and heartfelt support as they pursue their dreams beyond borders.</p>
+      </div>
+      <div>
+        <h3>Our Vision</h3>
+        <p>To become East Africa’s most trusted gateway for global mobility and international career success.</p>
+      </div>
+    </div>
+  </header> 
+    <div class="team">
+      <h2>Meet Our Team</h2>
+      <p>Experienced. Reliable. Committed.</p>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="m.jpg" alt="Team Member 1">
+          <h4>Jane N.</h4>
+          <p>Founder & Visa Expert</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/200" alt="Team Member 2">
+          <h4>David K.</h4>
+          <p>Career Counselor</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/200" alt="Team Member 3">
+          <h4>Grace A.</h4>
+          <p>Study Abroad Advisor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+    <script>
+      // Load header
+      fetch('client/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+    
+          // Reattach header event listener
+          const toggle = document.getElementById('menu-toggle');
+          if (toggle) {
+            toggle.addEventListener('click', function () {
+              document.getElementById('nav-links').classList.toggle('active');
+            });
+          }
+        });
+    
+      // Load footer
+      fetch('client/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+      
+    <div id="footer-placeholder"></div>
+      </body>
+    </html>

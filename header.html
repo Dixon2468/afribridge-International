@@ -1,0 +1,113 @@
+
+<style>
+  header{
+    background-color: #0bf351;
+   
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  top: 0;
+  z-index: 1000;
+
+  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #006400;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+  }
+  
+  .nav-links a:hover {
+    color: #006400;
+  }
+  
+  .cta-button {
+    background-color: #006400;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #004d00;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+</style>
+
+<nav>
+    <div class="logo">Afribridge International</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="cta-button" href="contact.html">Book Now</a></li>
+    </ul>
+  </nav>
